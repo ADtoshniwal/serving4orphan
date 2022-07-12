@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Messages | Firebase</title>
+    <link rel="stylesheet" href="./1styles.css">
+</head>
+<style>
+    /* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.navbar ul li a {
+  color: white;
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.left img {
+    height: 35px;
+    margin: 16px 3px;
+  }
+
+  #logo-image {
+
+    width: 46px;
+    height: 46px;
+    /* border-radius: -10%; */
+    overflow: hidden;
+    margin-top: 34px;
+  }
+
+  .left {
+
+    display: inline-block;
+    position: absolute;
+    left: 21px;
+    top: 4px;
+  }
+.container1 {
+  /* border: 3px solid black;
+        border-radius: 8px; */
+  margin: 0px 12px;
+  padding: 0px 79px;
+  width: 28%;
+}
+
+.para {
+  font-size: xx-large;
+  color: rgb(71, 67, 67);
+  font-family: "Asap", sans-serif;
+}
+.navbar {
+
+    display: inline-flex;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: #333;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Asap', sans-serif;
+  }
+
+  .navbar li {
+    display: inline-block;
+    font-family: 'Asap', sans-serif;
+  }
+
+  .navbar li a {
+    /* display: inline-block; */
+    padding: 12px;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 11px 52px;
+    text-decoration: none;
+    font-size: 23px;
+    font-family: 'Asap', sans-serif;
+
+  }
+
+  .navbar li a:hover {
+    color: grey;
+
+  }
+
+
+.container {
+  width: 90%;
+  height: 100vh;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputBox {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.inputBox input[type="text"],
+.inputBox input[type="email"] {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0px 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+.inputBox textarea {
+  width: 100%;
+  height: 120px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0px 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+.inputBox button {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.inputBox button:hover {
+  background: rgb(61, 59, 60);
+  transition: all 0.3s ease;
+}
+
+::placeholder {
+  font-size: 16px;
+}
+
+.alert {
+  width: 100%;
+  background: rgb(0, 255, 106);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  display: none;
+}
+</style>
+
+<body>
+    <div class="mid">
+        <!-- for navbar -->
+        <ul class="navbar">
+          <li> <a href="#"> Serving4Orphans</a></li>
+          <li> <a href="#"> Home</a></li>
+          <li> <a href="aboutus.html" target="_blank"> About us</a></li>
+          <li> <a href="donate.html" target="_blank">Donate</a></li>
+          <li> <a href="contactus.html" target="_blank"> Contact us</a></li>
+          <li> <a href="login.html" target="_blank">login/sign-up</a></li>
+        </ul>
+        <!-- <img src="img/donateimg.jpg" alt="error" width="100%" height="100%"> -->
+        
+      </div>
+      <div class="container1">
+        <br>
+        <p class="para">Enter the details of clothes below</p>
+        <br>
+        
+    <div class="container">
+        <form action="" id="clothsform">
+            <div class="alert">THANK U FOR DONATING</div>
+
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Your name...." />
+            </div>
+            <div class="inputBox">
+                <input type="text" id="contact" placeholder="Your number is ...." />
+            </div>
+            <div class="inputBox">
+                <input type="text" id="Quantity" placeholder="no of clothes you want to donate...." />
+            </div>
+
+            <div class="inputBox">
+                <input type="email" id="emailid" placeholder="Your Email....." />
+            </div>
+
+            <div class="inputBox">
+                <textarea id="address" cols="30" rows="10" placeholder="enter address"></textarea>
+            </div>
+            <div class="inputBox">
+                <textarea id="description" cols="30" rows="10" placeholder="describe more"></textarea>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./2mail.js"></script>
+
+
+</body>
+
+</html>
